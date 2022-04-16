@@ -9,10 +9,7 @@ html {
 body {
 	@apply container mx-auto;
 }
-header,
-footer {
-	@apply px-2.5 py-5 min-h-min;
-}
+header, main, footer { @apply py-6 px-0 ;} 
 header,
 footer {
 	@apply border-zinc-300 dark:border-zinc-800;
@@ -45,13 +42,9 @@ nav li:focus-within,
 	@apply underline decoration-slate-700 dark:decoration-zinc-200 decoration-2 underline-offset-1 transition;
 }
 main {
-	@apply prose prose-slate dark:prose-invert dark:prose-p:text-slate-50 dark:prose-li:text-slate-50 dark:prose-lead:text-slate-100 prose-lead:font-light mx-auto my-5 p-5 text-justify;
+	@apply prose prose-slate dark:prose-invert dark:prose-p:text-slate-50 dark:prose-li:text-slate-50 dark:prose-lead:text-slate-100 prose-lead:font-light mx-auto text-justify;
 }
-h1,
-h2,
-h3,
-h4,
-.info {
+h1 {
 	@apply text-center block w-full;
 }
 small + h1 {
@@ -80,21 +73,15 @@ footer {
 	html {
 		@apply p-6 text-lg;
 	}
-	header,
-	footer {
-		@apply px-3 py-6;
-	}
 	header {
 		@apply gap-6;
 	}
+	header, main, footer { @apply py-7 px-3 ;} 
 	.title {
 		@apply text-4xl;
 	}
 	.motto {
 		@apply text-center;
-	}
-	main {
-		@apply my-6 p-6;
 	}
 	.elenco-posts {
 		@apply gap-6;
@@ -105,13 +92,10 @@ footer {
 	html {
 		@apply p-7 text-xl;
 	}
-	header,
-	footer {
-		@apply p-7;
-	}
 	header {
 		@apply gap-7 flex-row;
 	}
+	header, main, footer { @apply py-8 px-3.5 ;} 
 	.title {
 		@apply text-left text-5xl;
 	}
@@ -124,13 +108,7 @@ footer {
 	nav > ul {
 		@apply flex-col gap-0;
 	}
-	main {
-		@apply my-7 p-7;
-	}
 	h1,
-	h2,
-	h3,
-	h4,
 	small.info {
 		@apply text-left;
 	}
@@ -149,12 +127,12 @@ footer {
 }
 
 @media screen(xl) {
-	header,
-	footer {
-		@apply p-8;
+	html {
+		@apply p-8 text-xl;
 	}
+	header, main, footer { @apply py-9 px-4;} 
 	main {
-		@apply max-w-screen-md my-8 p-8;
+		@apply max-w-screen-md;
 	}
 	.social {
 		@apply grow-0 gap-8 justify-end;
@@ -162,12 +140,12 @@ footer {
 }
 
 @media screen(2xl) {
-	header,
-	footer {
-		@apply p-9;
+	html {
+		@apply p-9 text-xl;
 	}
+	header, main, footer { @apply py-10 px-5 ;} 
 	main {
-		@apply max-w-screen-md my-9 p-9;
+		@apply max-w-screen-lg;
 	}
 	.social {
 		@apply grow-0 gap-9 justify-end;
