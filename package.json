@@ -7,7 +7,7 @@
 		"dev": "run-p dev:*",
 		"go!": "run-s clean prettier css:* eleventy social-images",
 		"clean": "rimraf public",
-		"css:website": "npx tailwindcss -i src/_11ty/_tailwindCSS/raw-website.css -o src/_11ty/_includes/style.css --minify",
+		"css:website": "npx tailwindcss -i src/_11ty/_tailwindCSS/raw-website.css -o public/css/style.css --minify",
 		"css:social-img": "npx tailwindcss -i src/_11ty/_tailwindCSS/raw-social.css -o ./src/_11ty/_social/social.css --minify",
 		"eleventy": "eleventy",
 		"social-images": "eleventy-social-images --outputDir public --imageDir /img/social --dataFile ./src/_11ty/_social/pages.json --templatePath ./src/_11ty/_social/template.html --stylesPath ./src/_11ty/_social/social.css --width 1280 --height 720 --deviceScaleFactor 1",
