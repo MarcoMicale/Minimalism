@@ -9,6 +9,6 @@ AMP_SW.init({
 	],
 	offlinePageOptions: {
 		url: '/offline.html',
-		assets: [],
+		assets: ['/css/style.css'],
 	},
 })
