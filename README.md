@@ -17,7 +17,7 @@
 - [ ] Immagini social dinamiche per ogni pagina/post
 - [x] Ottimizzazione SEO
 - [x] 404 error page
-- [ ] Tutti 100 in lighthouse
+- [ ] Tutti 100 in lighthouse 99,8%
 - [x] Light/Dark mode
 - [ ]
 
