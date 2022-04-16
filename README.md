@@ -1,5 +1,9 @@
 # Minimalism
 
+<a href="https://625acb66ce99ee000933cd18--venerable-sundae-621325.netlify.app/" target="blank_">
+  <img alt="antreprima" src="http://marcomicale.altervista.org/minimalism.webp" heheight="100" >
+</a>
+
 > > Simplicity is the ultimate sophistication!
 
 Inizio 04/04/22 magari è la volta buona!
