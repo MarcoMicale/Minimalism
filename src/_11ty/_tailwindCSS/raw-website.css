@@ -11,7 +11,7 @@ body {
 }
 header,
 footer {
-	@apply p-5 min-h-min;
+	@apply px-2.5 py-5 min-h-min;
 }
 header,
 footer {
@@ -45,7 +45,7 @@ nav li:focus-within,
 	@apply underline decoration-slate-700 dark:decoration-zinc-200 decoration-2 underline-offset-1 transition;
 }
 main {
-	@apply prose prose-slate dark:prose-invert dark:prose-p:text-slate-50 dark:prose-li:text-slate-50 dark:prose-lead:text-slate-100 prose-lead:font-light mx-auto my-5 px-0 py-5 text-justify;
+	@apply prose prose-slate dark:prose-invert dark:prose-p:text-slate-50 dark:prose-li:text-slate-50 dark:prose-lead:text-slate-100 prose-lead:font-light mx-auto my-5 p-5 text-justify;
 }
 h1,
 h2,
@@ -82,7 +82,7 @@ footer {
 	}
 	header,
 	footer {
-		@apply p-6;
+		@apply px-3 py-6;
 	}
 	header {
 		@apply gap-6;
@@ -94,7 +94,7 @@ footer {
 		@apply text-center;
 	}
 	main {
-		@apply my-6 p-3;
+		@apply my-6 p-6;
 	}
 	.elenco-posts {
 		@apply gap-6;
@@ -125,7 +125,7 @@ footer {
 		@apply flex-col gap-0;
 	}
 	main {
-		@apply my-7 p-3.5;
+		@apply my-7 p-7;
 	}
 	h1,
 	h2,
@@ -154,7 +154,7 @@ footer {
 		@apply p-8;
 	}
 	main {
-		@apply max-w-screen-md my-8 p-4;
+		@apply max-w-screen-md my-8 p-8;
 	}
 	.social {
 		@apply grow-0 gap-8 justify-end;
@@ -167,7 +167,7 @@ footer {
 		@apply p-9;
 	}
 	main {
-		@apply max-w-screen-md my-9 p-4;
+		@apply max-w-screen-md my-9 p-9;
 	}
 	.social {
 		@apply grow-0 gap-9 justify-end;
