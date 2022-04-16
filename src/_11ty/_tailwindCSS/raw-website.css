@@ -4,7 +4,7 @@
 
 html {
 	font-family: 'Roboto Serif', sans-serif;
-	@apply bg-zinc-100 dark:bg-zinc-900 px-4 text-base text-slate-900 dark:text-slate-100 transition-all;
+	@apply bg-zinc-100 dark:bg-zinc-900 px-4 text-base text-slate-900 dark:text-slate-100 transition-all scroll-smooth ;
 }
 body {
 	@apply container mx-auto;
@@ -12,7 +12,7 @@ body {
 header,
 main,
 footer {
-	@apply min-h-min	p-4;
+	@apply min-h-min p-4;
 }
 header,
 footer {
@@ -48,6 +48,8 @@ nav li:focus-within,
 main {
 	@apply prose prose-slate dark:prose-invert dark:prose-p:text-slate-50 dark:prose-li:text-slate-50 mx-auto my-4 px-0 text-justify;
 }
+h1, h2, h3, h4, .info { @apply text-center block w-full; }
+small + h1 { @apply mt-2; }
 .elenco-posts {
 	@apply flex flex-col gap-4 divide-y divide-solid divide-zinc-300 dark:divide-zinc-800 list-none list-outside pl-0;
 }
@@ -55,14 +57,14 @@ main {
 	@apply no-underline font-extrabold;
 }
 footer {
-	@apply border-t flex flex-row justify-between;
+	@apply border-t flex flex-col-reverse justify-between gap-x-4 gap-y-6;
+}
+.credit { @apply grow text-center; }
+.social {
+	@apply flex flex-row gap-2.5 grow justify-evenly;
 }
 .icon {
-	@apply h-5 w-5;
-}
-
-.flag-ucraine {
-	@apply box-content h-[4px] w-screen bg-[#FFD500] border-t-4 border-[#005BBB] absolute inset-x-0 top-0;
+	@apply h-6 w-6 stroke-1 stroke-slate-900 dark:stroke-slate-100;
 }
 
 @media screen(sm) {
@@ -81,7 +83,7 @@ footer {
 		@apply text-4xl;
 	}
 	.motto {
-		@apply text-left;
+		@apply text-center;
 	}
 	main {
 		@apply my-6 px-0;
@@ -118,8 +120,17 @@ footer {
 	main {
 		@apply my-8 px-0;
 	}
+	h1, h2, h3, h4, small.info { @apply text-left; }
 	.elenco-posts {
 		@apply gap-8;
+	}
+	footer { @apply flex-row; }
+	.credit { @apply grow-0 text-center; }
+	.social {
+		@apply grow-0 justify-end;
+	}
+	.icon {
+		@apply h-5 w-5 ;
 	}
 }
 

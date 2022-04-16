@@ -13,7 +13,7 @@ type: article
 <body>
     {% include "_nav.njk" %}
     <main>
-        <small>
+        <small class="info">
             {{ luogo }}&nbsp;
             <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>&nbsp;&ndash;&nbsp;
             {{ content | readingTime }}&nbsp;per&nbsp;leggerlo
