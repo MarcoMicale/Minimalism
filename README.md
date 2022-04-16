@@ -4,7 +4,7 @@
   <img alt="antreprima" src="http://marcomicale.altervista.org/minimalism.webp" width="100%" >
 </a>
 
-> > Simplicity is the ultimate sophistication!
+> Simplicity is the ultimate sophistication!
 
 Inizio 04/04/22 magari è la volta buona!
 
