@@ -10,9 +10,9 @@ Inizio 04/04/22 magari è la volta buona!
 - [x] Blog
 - [x] Fedd Rss
 - [x] Sitemap
-- [ ] PWA
+- [x] PWA
 - [ ] Immagini dinamiche per ogni pagina/post
-- [ ] Ottimizzazione SEO
+- [x] Ottimizzazione SEO
 - [x] 404 error page
 - [ ] Tutti 100 in lighthouse
 
