@@ -11,10 +11,13 @@ Inizio 04/04/22 magari è la volta buona!
 - [x] Fedd Rss
 - [x] Sitemap
 - [x] PWA
-- [ ] Immagini dinamiche per ogni pagina/post
+- [ ] Immagini principali personalizzabili per ogni pagina/post
+- [ ] Immagini social dinamiche per ogni pagina/post
 - [x] Ottimizzazione SEO
 - [x] 404 error page
 - [ ] Tutti 100 in lighthouse
+- [x] Light/Dark mode
+- [ ]
 
 ## Cosa non voglio?
 
@@ -40,4 +43,4 @@ Inizio 04/04/22 magari è la volta buona!
 
 ## Status:
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4b22cd7e-0d27-47eb-babe-f831b068abdb/deploy-status)](https://app.netlify.com/sites/flamboyant-kirch-0d0ad1/deploys)
+[![Build Status](https://badges.netlify.com/api/venerable-sundae-621325.svg?branch=master)](https://app.netlify.com/sites/venerable-sundae-621325/deploys)
