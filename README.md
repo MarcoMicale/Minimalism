@@ -6,8 +6,6 @@
 
 > Simplicity is the ultimate sophistication!
 
-Inizio 04/04/22 magari è la volta buona!
-
 ## Cosa voglio ottene?
 
 - [x] Creazione pagine velocemente
