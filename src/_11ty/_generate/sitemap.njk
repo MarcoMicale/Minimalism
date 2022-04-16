@@ -1,0 +1,24 @@
+---
+permalink: sitemap.xml
+---
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  {%- for page in collections.all %}
+  {% set absoluteUrl %}{{ page.url | url | absoluteUrl(meta.url) }}{% endset %}
+  <url>
+    <loc>{{ absoluteUrl }}</loc>
+    {% if page.url == '/' %}
+    <lastmod>{{ collections.all | rssLastUpdatedDate }}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1.00</priority>
+    {% else %}
+    <lastmod>{{ page.date | rssDate }}</lastmod>
+    {% endif %}
+    <priority>0.80</priority>
+  </url>
+  {%- endfor %}
+</urlset>

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif&family=Roboto:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { 
+    font-family: 'Roboto Serif', sans-serif;
+    @apply bg-zinc-100 dark:bg-zinc-900 px-4 text-base text-slate-900 dark:text-slate-100 transition-all ; 
+}
+body { @apply container mx-auto ; }
+header, main, footer { @apply min-h-min	p-4 ; }
+header, footer { @apply border-zinc-300 dark:border-zinc-800 ; }
+header { @apply flex items-center justify-between gap-4 flex-col border-b ; }
+hgroup { @apply inline-block align-middle ; }
+.title { @apply text-center font-black text-3xl; }
+.motto { @apply text-center ; }
+nav { @apply text-center items-center ; }
+nav > ul { @apply flex flex-row gap-4 ; }
+nav li { @apply cursor-pointer ; }
+nav li:hover, nav li:focus, nav li:focus-within, .active { @apply underline decoration-slate-700 dark:decoration-zinc-200 decoration-2 underline-offset-1 transition ; }
+main { @apply prose prose-slate dark:prose-invert dark:prose-p:text-slate-50 dark:prose-li:text-slate-50 mx-auto my-4 px-0 text-justify ; }
+.elenco-posts { @apply flex flex-col gap-4 divide-y divide-solid divide-zinc-300 dark:divide-zinc-800 list-none list-outside pl-0; }
+.posts > h2 > a { @apply no-underline font-extrabold ; }
+footer { @apply border-t flex flex-row justify-between ; }
+.icon { @apply h-5 w-5 ; }
+
+.flag-ucraine { @apply box-content h-[4px] w-screen bg-[#FFD500] border-t-4 border-[#005BBB] absolute inset-x-0 top-0 ; }
+
+@media screen(sm) {
+    html { @apply px-6 text-lg ; }
+    header, main, footer { @apply p-6 ; }
+    header { @apply gap-6 ; }
+    .title { @apply text-4xl ; }
+    .motto { @apply text-left ; }
+    main { @apply my-6 px-0 ; }
+    .elenco-posts { @apply gap-6; }
+}
+
+@media screen(md) {
+    html { @apply px-8 text-xl ; }
+    header, main, footer { @apply p-8 ; }
+    header { @apply gap-8 flex-row ; }
+    .title { @apply text-left text-5xl ; }
+    .motto { @apply text-left ; }
+    nav { @apply text-right items-center ; }
+    nav > ul { @apply flex-col gap-0 ; }
+    main { @apply my-8 px-0 ; }
+    .elenco-posts { @apply gap-8; }
+}
+
+@media screen(2xl) {
+    main { @apply max-w-screen-md	 ; }
+}

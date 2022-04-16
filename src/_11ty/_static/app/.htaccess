@@ -1,0 +1,42 @@
+AddDefaultCharset UTF-8   
+AddDefaultCharset ISO-8859-1
+
+DefaultLanguage it-IT
+
+Header set Cache-Control "max-age=300, public"
+
+Header set Content-Security-Policy "default-src self"
+Header always set Content-Security-Policy "upgrade-insecure-requests;"
+Header set Strict-Transport-Security "max-age=31536000;includeSubDomains;"
+Header always set X-Frame-Options DENY
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Content-Type-Options nosniff
+Header set Referrer-Policy: no-referrer
+Header set Feature-Policy: "geolocation none"
+
+ErrorDocument 404 /404.html
+
+<Files .htaccess>
+    order allow,deny
+    deny from all
+</Files>
+
+Options All -Indexes
+
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|webp|js|css|pdf|txt|html|htm|xml)$">
+    Header set Cache-Control "max-age=43200"
+</FilesMatch>
+
+<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+    Header unset Cache-Control
+</FilesMatch>

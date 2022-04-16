@@ -1,0 +1,27 @@
+---
+title: Articolo del Blog
+description: Questa è la descrizione di uno degli articoli del blog
+tags: post
+date: Created
+luogo: Palermo
+type: article
+---
+<!DOCTYPE html>
+<html lang="it">
+{% include "_head-article.njk" %}
+<!-- Start Body -->
+<body>
+    {% include "_nav.njk" %}
+    <main>
+        <small>
+            {{ luogo }}&nbsp;
+            <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>&nbsp;&ndash;&nbsp;
+            {{ content | readingTime }}&nbsp;per&nbsp;leggerlo
+        </small>
+        <h1>{{ title }}</h1>
+        {{ content | safe }}  
+    </main>
+    {% include "_footer.njk" %}
+</body>
+<!-- End Body -->
+</html>

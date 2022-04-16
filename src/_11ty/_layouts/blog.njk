@@ -1,0 +1,33 @@
+---
+title: Blog
+description: In questa pagina troverai tutti i pots che ho pubblicato
+keyword: test
+type: website
+---
+<!DOCTYPE html>
+<html lang="it">
+{% include "_head-website.njk" %}
+<!-- Start Body -->
+<body>
+    {% include "_nav.njk" %}
+    <main>
+        <ul class="elenco-posts">
+            <li class="posts">
+                {{ content | safe }}
+            </li>
+        {%- for post in collections.post | reverse -%}
+            <li class="posts">
+                <h2><a href="{{post.url}}">{{ post.data.title }}</a></h2>
+                <p>{{ post.data.description | safe }}</p>
+                <small>
+                    <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>&nbsp;&nbsp;&ndash;&nbsp;
+                    {{ content | readingTime }}&nbsp;per&nbsp;leggerlo
+                </small>
+            </li>
+        {%- endfor -%}
+        </ul>  
+    </main>
+    {% include "_footer.njk" %}
+</body>
+<!-- End Body -->
+</html>

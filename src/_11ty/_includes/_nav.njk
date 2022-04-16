@@ -1,0 +1,19 @@
+<div class="flag-ucraine">&nbsp;</div>
+<header>
+    <!-- Title -->
+    <hgroup>
+        <p class="title">{{ meta.siteName }}</p>
+        <p class="motto">{{ meta.motto }}<p>
+    </hgroup>
+    <!-- Navigation -->
+    <nav>
+        {% set navPages = collections.all | eleventyNavigation %}
+        <ul>
+            {%- for entry in navPages %}
+            <li {% if entry.url == page.url %} class="active" {% endif %}>
+                <a href="{{ entry.url | url }}">{{entry.title}}</a>
+            </li>
+            {%- endfor %}   
+        </ul>
+    </nav>
+</header>

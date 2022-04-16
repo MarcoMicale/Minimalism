@@ -1,0 +1,42 @@
+{
+	"name": "minimalism",
+	"version": "0.1.00",
+	"description": "I beg you God, make sure that it is the last!",
+	"main": "index.js",
+	"scripts": {
+		"dev": "run-p dev:*",
+		"go!": "run-s clean prettier css:* eleventy social-images",
+		"clean": "rimraf public",
+		"css:website": "npx tailwindcss -i src/_11ty/_tailwindCSS/raw-website.css -o src/_11ty/_includes/style.css --minify",
+		"css:social-img": "npx tailwindcss -i src/_11ty/_tailwindCSS/raw-social.css -o ./src/_11ty/_social/social.css --minify",
+		"eleventy": "eleventy",
+		"social-images": "eleventy-social-images --outputDir public --imageDir /img/social --dataFile ./src/_11ty/_social/pages.json --templatePath ./src/_11ty/_social/template.html --stylesPath ./src/_11ty/_social/social.css --width 1280 --height 720 --deviceScaleFactor 1",
+		"prettier": "npx prettier -w ./",
+		"dev:css": "npx tailwindcss -i src/_11ty/_tailwindCSS/raw-website.css -o src/_11ty/_includes/style.css --watch",
+		"dev:11ty": "eleventy --serve --watch"
+	},
+	"keywords": [
+		"Website",
+		"Blog",
+		"11ty",
+		"Tailwindcss",
+		"SEO",
+		"PWA"
+	],
+	"author": "Marco Micale <marcomicale@gmail.com> (https://www.marcomicale.eu/)",
+	"license": "MIT",
+	"devDependencies": {
+		"@11ty/eleventy": "^1.0.0",
+		"@11ty/eleventy-navigation": "^0.3.2",
+		"@11ty/eleventy-plugin-rss": "^1.1.2",
+		"@11tyrocks/eleventy-plugin-social-images": "^0.4.1",
+		"@tailwindcss/typography": "^0.5.2",
+		"eleventy-plugin-reading-time": "^0.0.1",
+		"html-minifier": "^4.0.0",
+		"luxon": "^2.3.1",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^2.6.2",
+		"rimraf": "^3.0.2",
+		"tailwindcss": "^3.0.24"
+	}
+}

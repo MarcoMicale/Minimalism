@@ -1,0 +1,19 @@
+---
+title: Pagina Generica
+description: è una pagina come tante, oppure tante pagine sono come lei?
+keyword: test
+type: website
+---
+<!DOCTYPE html>
+<html lang="it">
+{% include "_head-website.njk" %}
+<!-- Start Body -->
+<body>
+    {% include "_nav.njk" %}
+    <main>
+        {{ content | safe }}  
+    </main>
+    {% include "_footer.njk" %}
+</body>
+<!-- End Body -->
+</html>

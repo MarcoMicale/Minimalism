@@ -1,0 +1,50 @@
+---
+permalink: feed.xml
+eleventyExcludeFromCollections: true 
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<feed version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"
+				   xmlns:wfw="http://wellformedweb.org/CommentAPI/" 
+				   xmlns:dc="http://purl.org/dc/elements/1.1/" 
+				   xmlns:atom="http://www.w3.org/2005/Atom" 
+				   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+				   xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+	<channel>
+		<title>{{ meta.siteName }}</title>
+		<link>{{  '/index.html' | url }}</link>
+		<image>
+    		<url>{{  '/img/social/home.png' | url }}</url>
+			<link>{{  '/index.html' | url }}</link>
+		</image>
+		<description>{{ meta.siteDescription }}</description>
+		<copyright>Copyright {% year %} {{ meta.authorName }}</copyright>
+        <language>{{ meta.language }}</language>
+		<author>
+			<name>{{ meta.authorName }}</name>
+			<email>{{ meta.mail }}</email>
+		</author>
+		{% for pages in collections.post | reverse %}
+		<item>
+			<title>{{pages.data.title }}</title>
+			{% set absolutePostUrl %}{{ pages.url | url | absoluteUrl(meta.url) }}{% endset %}
+			<link>{{ absolutePostUrl }}</link>
+			<updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+			<description>{{ pages.data.description }}</description>
+			<content type="html">{{ pages.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+			<author>
+				<name>{{ meta.authorName }}</name>
+				<email>{{ meta.mail }}</email>
+			</author>
+		</item>
+		{% endfor %} 
+	</channel>
+	{% for pages in collections.pages %}
+	<channel>
+		<title>{{ pages.data.title }}</title>
+		{% set absolutePostUrl %}{{ pages.url | url | absoluteUrl(meta.url) }}{% endset %}
+		<link>{{ absolutePostUrl }}</link>
+		<description>{{ pages.data.description }}</description>
+		<content type="html">{{ pages.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+	</channel>
+	{% endfor %} 
+</feed>

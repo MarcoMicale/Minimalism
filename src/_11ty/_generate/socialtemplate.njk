@@ -1,0 +1,27 @@
+---
+permalink: ./src/_11ty/_social/template.html
+permalinkBypassOutputDir: true
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      {% raw %}{{ style }}{% endraw %} 
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1></h1>
+    </header>
+    <footer>
+      <time datetime="{{ page.date }}">
+        {{ page.date | readableDate }}
+      </time>
+      <p>{{meta.authorName}}</p>
+      <img src="http://marcomicale.altervista.org/avatar.webp" alt="avatar" class="avatar">
+    </footer>
+  </body>
+</html>
