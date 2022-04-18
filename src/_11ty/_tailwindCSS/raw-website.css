@@ -4,12 +4,12 @@
 
 html {
 	font-family: 'Roboto Serif', sans-serif;
-	@apply p-5 bg-zinc-100 dark:bg-zinc-900 text-base text-slate-900 dark:text-slate-100 transition-all;
+	@apply px-5 bg-zinc-100 dark:bg-zinc-900 text-base text-slate-900 dark:text-slate-100 transition-all;
 }
 body {
 	@apply container mx-auto;
 }
-header, main, footer { @apply py-6 px-0 ;} 
+header, main, article, footer { @apply py-6 px-0 ;} 
 header,
 footer {
 	@apply border-zinc-300 dark:border-zinc-800;
@@ -41,10 +41,10 @@ nav li:focus-within,
 .active {
 	@apply underline decoration-sky-600 decoration-2 underline-offset-1 transition-all;
 }
-main {
+main, article {
 	@apply prose prose-sky dark:prose-invert dark:prose-p:text-slate-50 dark:prose-li:text-slate-50 dark:prose-lead:text-slate-100 prose-lead:font-light mx-auto text-justify my-2;
 }
-h1 {
+h1, article > small.info {
 	@apply text-center block w-full;
 }
 small + h1 {
@@ -76,13 +76,13 @@ footer {
 
 @media screen(sm) {
 	html {
-		@apply p-6 text-lg;
+		@apply px-6 text-lg;
 	}
 	header {
 		@apply gap-6;
 	}
-	header, main, footer { @apply py-7 px-3 ;} 
-	main { @apply my-2.5; }
+	header, main, article, footer { @apply py-7 px-3 ;} 
+	main, article { @apply my-2.5; }
 	.title {
 		@apply text-4xl;
 	}
@@ -96,12 +96,12 @@ footer {
 
 @media screen(md) {
 	html {
-		@apply p-7 text-xl;
+		@apply px-7 text-xl;
 	}
 	header {
 		@apply gap-7 flex-row;
 	}
-	header, main, footer { @apply py-8 px-4 ;} 
+	header, main, article, footer { @apply py-8 px-4 ;} 
 	.title {
 		@apply text-left text-5xl;
 	}
@@ -114,9 +114,9 @@ footer {
 	nav > ul {
 		@apply flex-col gap-0;
 	}
-	main { @apply my-3; }
+	main, article { @apply my-3; }
 	h1,
-	small.info {
+	article > small.info {
 		@apply text-left;
 	}
 	.elenco-posts {
@@ -135,10 +135,10 @@ footer {
 
 @media screen(xl) {
 	html {
-		@apply p-8 text-xl;
+		@apply px-8 text-xl;
 	}
-	header, main, footer { @apply py-9 px-4;} 
-	main {
+	header, main, article, footer { @apply py-9 px-4;} 
+	main, article {
 		@apply max-w-screen-md my-4;
 	}
 	.social {
@@ -148,10 +148,10 @@ footer {
 
 @media screen(2xl) {
 	html {
-		@apply p-9 text-xl;
+		@apply px-9 text-xl;
 	}
-	header, main, footer { @apply py-10 px-5 ;} 
-	main {
+	header, main, article, footer { @apply py-10 px-5 ;} 
+	main, article {
 		@apply max-w-screen-lg my-5;
 	}
 	.social {

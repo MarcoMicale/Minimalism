@@ -12,7 +12,7 @@ type: article
 <!-- Start Body -->
 <body>
     {% include "_nav.njk" %}
-    <main>
+    <article>
         <small class="info">
             {{ luogo }}&nbsp;
             <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>&nbsp;&ndash;&nbsp;
@@ -20,7 +20,7 @@ type: article
         </small>
         <h1>{{ title }}</h1>
         {{ content | safe }}  
-    </main>
+    </article>
     {% include "_footer.njk" %}
 </body>
 <!-- End Body -->
