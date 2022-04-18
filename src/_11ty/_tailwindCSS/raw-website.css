@@ -21,7 +21,7 @@ hgroup {
 	@apply inline-block align-middle;
 }
 .title {
-	@apply text-center font-black text-3xl;
+	@apply text-center font-extrabold text-3xl;
 }
 .motto {
 	@apply tracking-wide text-center;
