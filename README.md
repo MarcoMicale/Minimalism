@@ -41,6 +41,6 @@
 
 ## Status
 
-### ALPHA
+### BETA
 
-Non usabile se non modificato.
+Usabile ma con qualche correzione da effettuare.
