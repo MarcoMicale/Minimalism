@@ -8,19 +8,19 @@
 
 ## Cosa voglio ottene?
 
-- [x] Creazione pagine velocemente
-- [x] Blog
-- [x] Fedd Rss
-- [x] Sitemap
-- [x] PWA
-- [x] Immagini social dinamiche per ogni pagina/post
-- [x] Ottimizzazione SEO
-- [x] 404 error page
-- [x] Offline page
-- [x] Link social facili - edit /src/_11ty/_data/meta.js
-- [ ] Tutti 100 in lighthouse 99,8% 😢
-- [x] Light/Dark mode
-- [x] [Netifly](https://www.netlify.com/)
+- ✅ Creazione pagine velocemente
+- ✅ Blog
+- ✅ Fedd Rss
+- ✅ Sitemap
+- ✅ PWA
+- ✅ Immagini social dinamiche per ogni pagina/post
+- ✅ Ottimizzazione SEO
+- ✅ 404 error page
+- ✅ Offline page
+- ✅ Link social facili - edit /src/_11ty/_data/meta.js
+- ❌ Tutti 100 in lighthouse 99,8% 😢
+- ✅ Light/Dark mode
+- ✅ [Netifly](https://www.netlify.com/)
 
   ## Cosa ho usato:
 
