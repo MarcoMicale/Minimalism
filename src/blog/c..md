@@ -1,11 +1,11 @@
 ---
 title: My third Blog Post
 description: This is the third post on my blog asap sa the autenticsb. Soluta ex corrupti quod libero.
-tags: ['post', 'personal']
+tags: ["post", "personal"]
 date: 2021-06-19
 luogo: Palermo
 layout: article.njk
-permalink: 'blog/{{ title | slugify }}.html'
+permalink: "blog/{{ title | slugify }}.html"
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ex corrupti quod libero eligendi id tempore molestiae, laboriosam magni cum maxime modi accusamus minima vitae quae, rerum doloribus quis magnam.

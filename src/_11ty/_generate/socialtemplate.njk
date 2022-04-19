@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      {% raw %}{{ style }}{% endraw %} 
+      {% raw %}{{style}}{% endraw %} 
     </style>
   </head>
   <body>
@@ -17,8 +17,8 @@ eleventyExcludeFromCollections: true
       <h1></h1>
     </header>
     <footer>
-      <time datetime="{{ page.date }}">
-        {{ page.date | readableDate }}
+      <time datetime="{{page.date}}">
+        {{page.date | readableDate}}
       </time>
       <p>{{meta.authorName}}</p>
       <img src="http://marcomicale.altervista.org/avatar.webp" alt="avatar" class="avatar">

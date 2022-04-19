@@ -3,9 +3,6 @@ AddDefaultCharset ISO-8859-1
 
 DefaultLanguage it-IT
 
-DirectoryIndex blog.html
-
-
 Header set Cache-Control "max-age=300, public"
 
 Header set Content-Security-Policy "default-src self"

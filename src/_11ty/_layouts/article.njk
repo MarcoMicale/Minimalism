@@ -15,11 +15,11 @@ type: article
     <article>
         <small class="info">
             {{ luogo }}&nbsp;
-            <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>&nbsp;&ndash;&nbsp;
-            {{ content | readingTime }}&nbsp;per&nbsp;leggerlo
+            <time datetime="{{page.date}}">{{page.date | readableDate}}</time>&nbsp;&ndash;&nbsp;
+            {{content | readingTime}}&nbsp;per&nbsp;leggerlo
         </small>
         <h1>{{ title }}</h1>
-        {{ content | safe }}  
+        {{content | safe}}  
     </article>
     {% include "_footer.njk" %}
 </body>

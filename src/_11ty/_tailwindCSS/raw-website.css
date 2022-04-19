@@ -2,159 +2,195 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-	font-family: 'Roboto Serif', sans-serif;
-	@apply px-5 bg-zinc-100 dark:bg-zinc-900 text-base text-slate-900 dark:text-slate-100 transition-all;
-}
-body {
-	@apply container mx-auto;
-}
-header, main, article, footer { @apply py-6 px-0 ;} 
-header,
-footer {
-	@apply border-zinc-300 dark:border-zinc-800;
-}
-header {
-	@apply flex items-center justify-between gap-5 flex-col border-b;
-}
-hgroup {
-	@apply inline-block align-middle;
-}
-.title {
-	@apply text-center font-extrabold text-3xl;
-}
-.motto {
-	@apply tracking-wide text-center;
-}
-nav {
-	@apply text-center items-center;
-}
-nav > ul {
-	@apply flex flex-row gap-5;
-}
-nav li {
-	@apply cursor-pointer tracking-wide;
-}
-nav li:hover,
-nav li:focus,
-nav li:focus-within,
-.active {
-	@apply underline decoration-sky-600 decoration-2 underline-offset-1 transition-all;
-}
-main, article {
-	@apply prose prose-sky dark:prose-invert dark:prose-p:text-slate-50 dark:prose-li:text-slate-50 dark:prose-lead:text-slate-100 prose-lead:font-light mx-auto text-justify my-2;
-}
-h1, article > small.info {
-	@apply text-center block w-full;
-}
-small + h1 {
-	@apply mt-2;
-}
-.elenco-posts {
-	@apply flex flex-col gap-5 divide-y divide-solid divide-zinc-300 dark:divide-zinc-800 list-none list-outside pl-0;
-}
-.posts > h2 > a {
-	@apply no-underline font-extrabold;
-}
-footer {
-	@apply border-t flex flex-col-reverse justify-between gap-5;
-}
-.credit {
-	@apply grow text-center;
-}
-.social {
-	@apply flex flex-row gap-5 grow justify-evenly;
-}
-.icon {
-	@apply h-6 w-6 stroke-1 stroke-slate-900 dark:stroke-slate-100;
-}
-.icon:hover,
-.icon:focus,
-.icon:focus-within, {
-	@apply hover:stroke-sky-600;
+@layer base {
+  html {
+    @apply px-5 bg-zinc-100 dark:bg-zinc-900 font-serif text-base text-slate-900 dark:text-slate-100 transition-all;
+  }
+  body {
+    @apply container mx-auto;
+  }
+  header,
+  main,
+  article,
+  footer {
+    @apply py-6 px-0;
+  }
+  header,
+  footer {
+    @apply border-zinc-300 dark:border-zinc-800;
+  }
+  header {
+    @apply flex items-center justify-between gap-5 flex-col border-b;
+  }
+  hgroup {
+    @apply inline-block align-middle hover:text-sky-600;
+  }
+  .title {
+    @apply text-center font-extrabold text-3xl;
+  }
+  .motto {
+    @apply tracking-wide text-center;
+  }
+  nav {
+    @apply text-center items-center;
+  }
+  nav > ul {
+    @apply flex flex-row gap-5;
+  }
+  nav li {
+    @apply cursor-pointer tracking-wide;
+  }
+  nav li:hover,
+  nav li:focus,
+  nav li:focus-within,
+  .active {
+    @apply underline decoration-sky-600 decoration-2 underline-offset-1 transition-all;
+  }
+  main,
+  article {
+    @apply prose prose-sky dark:prose-invert dark:prose-p:text-slate-50 dark:prose-li:text-slate-50 dark:prose-lead:text-slate-100 prose-lead:font-light mx-auto text-justify my-2;
+  }
+  h1,
+  article > small.info {
+    @apply text-center block w-full;
+  }
+  small + h1 {
+    @apply mt-2;
+  }
+  .elenco-posts {
+    @apply flex flex-col gap-5 divide-y divide-solid divide-zinc-300 dark:divide-zinc-800 list-none list-outside pl-0;
+  }
+  .posts > h2 > a {
+    @apply no-underline font-extrabold;
+  }
+  footer {
+    @apply border-t flex flex-col-reverse justify-between gap-5;
+  }
+  .credit {
+    @apply grow text-center;
+  }
+  .social {
+    @apply flex flex-row gap-5 grow justify-evenly;
+  }
+  .icon {
+    @apply h-6 w-6 stroke-1 stroke-slate-900 dark:stroke-slate-100;
+  }
+  .icon:hover,
+  .icon:focus,
+  .icon:focus-within {
+    @apply hover:stroke-sky-600;
+  }
 }
 
 @media screen(sm) {
-	html {
-		@apply px-6 text-lg;
-	}
-	header {
-		@apply gap-6;
-	}
-	header, main, article, footer { @apply py-7 px-3 ;} 
-	main, article { @apply my-2.5; }
-	.title {
-		@apply text-4xl;
-	}
-	.motto {
-		@apply text-center;
-	}
-	.elenco-posts {
-		@apply gap-6;
-	}
+  html {
+    @apply px-6 text-lg;
+  }
+  header {
+    @apply gap-6;
+  }
+  header,
+  main,
+  article,
+  footer {
+    @apply py-7 px-3;
+  }
+  main,
+  article {
+    @apply my-2.5;
+  }
+  .title {
+    @apply text-4xl;
+  }
+  .motto {
+    @apply text-center;
+  }
+  .elenco-posts {
+    @apply gap-6;
+  }
 }
 
 @media screen(md) {
-	html {
-		@apply px-7 text-xl;
-	}
-	header {
-		@apply gap-7 flex-row;
-	}
-	header, main, article, footer { @apply py-8 px-4 ;} 
-	.title {
-		@apply text-left text-5xl;
-	}
-	.motto {
-		@apply text-left;
-	}
-	nav {
-		@apply text-right items-center;
-	}
-	nav > ul {
-		@apply flex-col gap-0;
-	}
-	main, article { @apply my-3; }
-	h1,
-	article > small.info {
-		@apply text-left;
-	}
-	.elenco-posts {
-		@apply gap-7;
-	}
-	footer {
-		@apply flex-row;
-	}
-	.credit {
-		@apply grow-0 text-center;
-	}
-	.social {
-		@apply grow-0 gap-7 justify-end;
-	}
+  html {
+    @apply px-7 text-xl;
+  }
+  header {
+    @apply gap-7 flex-row;
+  }
+  header,
+  main,
+  article,
+  footer {
+    @apply py-8 px-4;
+  }
+  .title {
+    @apply text-left text-5xl;
+  }
+  .motto {
+    @apply text-left;
+  }
+  nav {
+    @apply text-right items-center;
+  }
+  nav > ul {
+    @apply flex-col gap-0;
+  }
+  main,
+  article {
+    @apply my-3;
+  }
+  h1,
+  article > small.info {
+    @apply text-left;
+  }
+  .elenco-posts {
+    @apply gap-7;
+  }
+  footer {
+    @apply flex-row;
+  }
+  .credit {
+    @apply grow-0 text-center;
+  }
+  .social {
+    @apply grow-0 gap-7 justify-end;
+  }
 }
 
 @media screen(xl) {
-	html {
-		@apply px-8 text-xl;
-	}
-	header, main, article, footer { @apply py-9 px-4;} 
-	main, article {
-		@apply max-w-screen-md my-4;
-	}
-	.social {
-		@apply grow-0 gap-8 justify-end;
-	}
+  html {
+    @apply px-8 text-xl;
+  }
+  header,
+  main,
+  article,
+  footer {
+    @apply py-9 px-4;
+  }
+  main,
+  article {
+    @apply max-w-screen-md my-4;
+  }
+  .social {
+    @apply grow-0 gap-8 justify-end;
+  }
 }
 
 @media screen(2xl) {
-	html {
-		@apply px-9 text-xl;
-	}
-	header, main, article, footer { @apply py-10 px-5 ;} 
-	main, article {
-		@apply max-w-screen-lg my-5;
-	}
-	.social {
-		@apply grow-0 gap-9 justify-end;
-	}
+  html {
+    @apply px-9 text-xl;
+  }
+  header,
+  main,
+  article,
+  footer {
+    @apply py-10 px-5;
+  }
+  main,
+  article {
+    @apply max-w-screen-lg my-5;
+  }
+  .social {
+    @apply grow-0 gap-9 justify-end;
+  }
 }

@@ -13,20 +13,17 @@
 - [x] Fedd Rss
 - [x] Sitemap
 - [x] PWA
-- [ ] Immagini principali personalizzabili per ogni pagina/post
-- [ ] Immagini social dinamiche per ogni pagina/post
+- [x] Immagini social dinamiche per ogni pagina/post
 - [x] Ottimizzazione SEO
 - [x] 404 error page
+- [x] Offline page
+- [ ] Link social facili - edit /src/_11ty/_data/meta.js
 - [ ] Tutti 100 in lighthouse 99,8%
 - [x] Light/Dark mode
-- [ ]
+- [x] [Netifly](https://www.netlify.com/)
+- [ ] Serve altro? 
 
-## Cosa non voglio?
-
-- Complicazioni
-- Caos
-
-  ## Ho usato:
+  ## Cosa ho usato:
 
 - [Eleventy](https://github.com/11ty/eleventy)
   - [Plugin eleventy-img](https://github.com/11ty/eleventy-img)
@@ -36,13 +33,15 @@
   - [Plugin-reading-time](https://github.com/johanbrook/eleventy-plugin-reading-time)
 - [Tailwindcss](https://github.com/tailwindlabs/tailwindcss)
   - [Tailwindcss typography](https://github.com/tailwindlabs/tailwindcss-typography)
-- [Prettierrc](https://github.com/obartra/prettierrc)
 - [Slugify]([https://github.com/simov/slugify)
 - [Luxon](https://github.com/moment/luxon)
-- [html-minifier](https://github.com/kangax/html-minifier)
+- [html minifier](https://github.com/kangax/html-minifier)
 - [rimraf](https://github.com/isaacs/rimraf)
 - [npm-run-all](https://github.com/mysticatea/npm-run-all)
+- [Tabler Icon](https://github.com/tabler/tabler-icons)
 
-## Status:
+## Status
 
-[![Build Status](https://badges.netlify.com/api/venerable-sundae-621325.svg?branch=master)](https://app.netlify.com/sites/venerable-sundae-621325/deploys)
+### ALPHA
+
+Non usabile se non modificato.
