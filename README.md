@@ -17,11 +17,10 @@
 - [x] Ottimizzazione SEO
 - [x] 404 error page
 - [x] Offline page
-- [ ] Link social facili - edit /src/_11ty/_data/meta.js
-- [ ] Tutti 100 in lighthouse 99,8%
+- [x] Link social facili - edit /src/_11ty/_data/meta.js
+- [ ] Tutti 100 in lighthouse 99,8% 😢
 - [x] Light/Dark mode
 - [x] [Netifly](https://www.netlify.com/)
-- [ ] Serve altro? 
 
   ## Cosa ho usato:
 
