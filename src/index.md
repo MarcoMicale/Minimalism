@@ -1,8 +1,8 @@
 ---
 title: Home Page
 layout: page.njk
-permalink: "{{ title | slugify }}.html"
 keyword: test
+permalink: "{{ title | slugify }}.html"
 eleventyNavigation:
   key: "{{ title | slugify }}"
   title: Home
