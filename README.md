@@ -19,7 +19,7 @@
 - ✅ 404 error page
 - ✅ Offline page
 - ✅ Link social facili - edit /src/_11ty/_data/meta.js
-- ❌ Tutti 100 in lighthouse 99,8% 😢
+- ✅ Tutti 100 in lighthouse
 - ✅ Light/Dark mode
 - ✅ [Netifly](https://www.netlify.com/)
 
