@@ -68,9 +68,9 @@ Usabile ma con qualche correzione da effettuare.
 |       tasks.json
 |
 \---src
-    |   about-me.md                   # Pagina di esempio
-    |   blog.md                       # la pagina del tuo Blog (modifica da qui la intro)
-    |   index.md                      # La prima pagina del tuo sito
+    |   ...                           # Aggiungi le pagine che vuoi
+    |   blog.md                       # Pagina del tuo Blog (modifica da qui la intro)
+    |   index.md                      # La Prima pagina del tuo sito
     |
     +---blog
     |       ...                       # Inserisci qui i tuoi post per il blog
