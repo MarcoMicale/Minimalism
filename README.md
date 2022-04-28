@@ -41,7 +41,85 @@
 - [Tabler Icon](https://github.com/tabler/tabler-icons)
 
 ## Status
-
 ### BETA
 
 Usabile ma con qualche correzione da effettuare.
+
+## Folder Tree
+
+```bash
+|   .eleventy.js
+|   .gitattributes
+|   .gitignore
+|   LICENSE
+|   logo.png                        # Sostituisci questo file con il tuo logo
+|   netlify.toml
+|   package-lock.json
+|   package.json
+|   README.md
+|   SECURITY.md
+|   tailwind.config.js
+|
++---.github
+|   \---workflows
+|           codeql-analysis.yml
+|
++---.vscode
+|       tasks.json
+|
+\---src
+    |   about-me.md                   # Pagina di esempio
+    |   blog.md                       # la pagina del tuo Blog (modifica da qui la intro)
+    |   index.md                      # La prima pagina del tuo sito
+    |
+    +---blog
+    |       ...                       # Inserisci qui i tuoi post per il blog
+    |
+    \---_11ty
+        +---_data
+        |       meta.js               # Modifica questo file!
+        |
+        +---_generate
+        |       404.njk
+        |       feed.njk
+        |       manifest.njk
+        |       offline.njk
+        |       pagesjson.njk
+        |       robot.njk
+        |       sitemap.njk
+        |       socialtemplate.njk    # Modifica se vuoi cambiare l'immagine social
+        |
+        +---_includes
+        |       favicon.njk
+        |       footer.njk
+        |       head-article.njk
+        |       head-website.njk
+        |       head.njk
+        |       nav.njk
+        |
+        +---_layouts
+        |       article.njk
+        |       blog.njk
+        |       page.njk
+        |
+        +---_social
+        |       pages.json
+        |       social.css
+        |       template.html
+        |
+        +---_static
+        |   +---app
+        |   |       .htaccess
+        |   |       sw.js
+        |   |
+        |   +---favicon
+        |   |       ...             # Favicon Generate a partire dal file logo.png
+        |   |
+        |   \---img
+        |           ...
+        |
+        \---_tailwindCSS
+                raw-social.css       # CSS del tuo sito
+                raw-website.css      # Modifica se vuoi cambiare l'immagine social
+
+```
