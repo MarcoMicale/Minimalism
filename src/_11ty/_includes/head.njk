@@ -1,0 +1,82 @@
+<!-- Titolo Automatizzato -->
+{%- set pageTitle %}{% if title %}{{title}} {% endif %} - {{meta.siteName}} {% endset -%}
+<!-- Descrizione Automatizzata -->
+{%- set pageDescription %}{% if description %}{{description}} {% else %}{{meta.siteDescription}} {% endif %}{% endset -%}
+<!-- Social Immagine -->
+{%- set pageSocialImg %}{{meta.url}} /img/social/{% if title %}{{title | slug}} {% else %}home{% endif %}.png{% endset -%}
+<!-- Url della pagina -->
+{%- set pageUrls %}{{meta.url}} {{page.url}} {% endset -%}
+<!-- Start Head -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- About Page -->
+    <title>{{pageTitle}} </title>
+    <meta name="description" content="{{pageDescription}}" />
+    <meta name="keywords" content="{{pageKeyword}}" />
+    <meta name="creation_Date" content="{{meta.creationDate}}" />
+<!-- Robot -->
+    <meta name="robots" content="{{meta.robots}}" />
+<!-- Autore -->
+    <meta name="author" content="{{meta.authorName}}" />
+<!-- Font -->
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com/" />
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preload"
+          as="style"
+          href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300;400;500;600;700;800&subset=latin-ext&display=swap" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300;400;500;600;700;800&subset=latin-ext&display=swap"
+          media="print"
+          onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300;400;500;600;700;800&subset=latin-ext&display=swap">
+    </noscript>
+<!-- CSS -->
+    <link rel="preload" href="{{'/css/style.css' | url}}" as="style">
+    <link rel="stylesheet" href="{{'/css/style.css' | url}}" media="all">
+<!-- Sitemap -->
+    <link rel="sitemap"
+          type="application/rss+xml"
+          title="RSS Feed for {{meta.siteName}} "
+          href="{{'/feed.xml' | url}}" />
+<!-- Favicon -->
+    <link rel="shortcut icon" href="{{'/favicon/favicon.ico' | url}} " sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="{{'/favicon/safari-pinned-tab.svg' | url}}" />
+<!-- Social -->
+    <!-- Open Graph -->
+    <meta property="og:type" content="{{type}}" />
+    <meta property="og:locale" content="{{meta.language}}" />
+    <meta property="og:image" content="{{pageSocialImg}} ">
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta property="og:title" content="{{pageTitle}}" />
+    <meta property="og:description" content="{{pageDescription}}" />
+    <meta property="og:url" content="{{meta.url}}" />
+    <meta property="og:image:alt" content="Immagine per la condivisione sui social">
+    <!-- Facebook -->
+    <meta property="fb:admins" content="{{meta.facebookUsername}}" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@{{meta.twitterUsername}}" />
+    <meta name="twitter:creator" content="@{{meta.twitterUsername}}" />
+    <meta name="twitter:url" content="">
+    <meta name="twitter:title" content="{{pageTitle}}" />
+    <meta name="twitter:description" content="{{pageDescription}}" />
+    <meta name="twitter:image:src" content="{{pageSocialImg}}" />
+    <meta name="twitter:image:alt" content="{{meta.siteName}}  logo" />
+    <!-- PWA -->
+    <link rel="manifest" href="{{'/manifest.webmanifest' | url}}" />
+    <meta name="apple-mobile-web-app-title" content="{{meta.siteName}}">
+    <meta name="application-name" content="{{meta.siteName}}">
+    <meta name="msapplication-TileColor" content="{{meta.themeColor}}">
+    <meta name="theme-color" content="{{meta.themeColor}}">
+{% include "favicon.njk" %}
+    <!-- Service Worker -->
+    <script>
+        if ("serviceWorker" in navigator)
+            navigator.serviceWorker.register("/sw.js");
+    </script>

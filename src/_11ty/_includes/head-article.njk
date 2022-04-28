@@ -1,0 +1,41 @@
+<!-- Titolo Automatizzato -->
+{%- set pageTitle %}{% if title %}{{title}}{% endif %} - {{meta.siteName}}{% endset -%}
+<!-- Descrizione Automatizzata -->
+{%- set pageDescription %}{% if description %}{{description}}{% else %}{{meta.siteDescription}}{% endif %}{% endset -%}
+<!-- Social Immagine -->
+{%- set pageSocialImg %}{{meta.url}}/img/social/{% if title %}{{title | slug}}{% else %}home{% endif %}.png{% endset -%}
+<!-- Url della pagina -->
+{%- set pageUrls %}{{meta.url}}{{page.url}}{% endset -%}
+{% include "head.njk" %}
+    <!-- Schema json -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "NewsArticle",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "{{pageUrls}}"
+            },
+            "headline": "{{pageTitle}}",
+            "image": [
+                "{{pageSocialImg}}"
+            ],
+            "datePublished": "{{page.date}}",
+            "dateModified": "{{page.date}}",
+            "author": {
+                "@type": "Person",
+                "name": "{{meta.authorName}}"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "{{meta.siteName}}",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "{{meta.url}}img/avatar.webpg"
+                }
+            },
+            "description": "{{pageDescription}}"
+        }
+    </script>
+</head>
+<!-- End Head - Article -->

@@ -9,6 +9,7 @@
 ## Cosa voglio ottene?
 
 - ✅ Creazione pagine velocemente
+- ✅ Favicon personalizzabile (msapplication/apple/safari/chrome)
 - ✅ Blog
 - ✅ Fedd Rss
 - ✅ Sitemap

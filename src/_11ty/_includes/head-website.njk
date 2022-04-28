@@ -1,0 +1,42 @@
+<!-- Titolo Automatizzato -->
+{%- set pageTitle %}{% if title %}{{title}}{% endif %} - {{meta.siteName}}{% endset -%}
+<!-- Descrizione Automatizzata -->
+{%- set pageDescription %}{% if description %}{{description}}{% else %}{{meta.siteDescription}}{% endif %}{% endset -%}
+<!-- Social Immagine -->
+{%- set pageSocialImg %}{{meta.url}}/img/social/{% if title %}{{title | slug}}{% else %}home{% endif %}.png{% endset -%}
+<!-- Url della pagina -->
+{%- set pageUrls %}{{meta.url}}{{page.url}}{% endset -%}
+{% include "head.njk" %}
+    <!-- Schema json -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Webpage",
+            "url": "{{pageUrls}}",
+            "name": {{page.URL}}"}}meta.siteName}}",
+            "headline": "{{pageTitle}}",
+            "description": "{{pageDescription}}",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "{{pageUrls}}"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "{{meta.authorName}}",
+            "logo": {
+                "url": "{{meta.url}}img/marcomicale.webp",
+                "width": 1200,
+                "height": 900,
+                "@type": "ImageObject"
+            }
+            },
+            "image": {
+                "@type": "ImageObject",
+                "url": "{{pageSocialImg}}",
+                "width": 1280,
+                "height": 720
+            }
+        }
+    </script>
+</head>
+<!-- End Head - Page -->

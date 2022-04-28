@@ -6,14 +6,14 @@ type: website
 ---
 <!DOCTYPE html>
 <html lang="it">
-{% include "_head-website.njk" %}
+{% include "head-website.njk" %}
 <!-- Start Body -->
 <body>
-    {% include "_nav.njk" %}
+    {% include "nav.njk" %}
     <main>
-        {{content | safe}}  
+        {{content | safe}}
     </main>
-    {% include "_footer.njk" %}
+    {% include "footer.njk" %}
 </body>
 <!-- End Body -->
 </html>

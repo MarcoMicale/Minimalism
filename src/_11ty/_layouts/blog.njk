@@ -6,10 +6,10 @@ type: website
 ---
 <!DOCTYPE html>
 <html lang="it">
-{% include "_head-website.njk" %}
+{% include "head-website.njk" %}
 <!-- Start Body -->
 <body>
-    {% include "_nav.njk" %}
+    {% include "nav.njk" %}
     <main>
         <ul class="elenco-posts">
             <li class="posts">
@@ -25,9 +25,9 @@ type: website
                 </small>
             </li>
         {%- endfor -%}
-        </ul>  
+        </ul>
     </main>
-    {% include "_footer.njk" %}
+    {% include "footer.njk" %}
 </body>
 <!-- End Body -->
 </html>
