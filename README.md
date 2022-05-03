@@ -70,20 +70,20 @@ Usabile ma con qualche correzione da effettuare.
 \---src
     |   ...                           # Aggiungi le pagine che vuoi
     |   blog.md                       # Pagina del tuo Blog (modifica da qui la intro)
-    |   index.md                      # La Prima pagina del tuo sito
+    |   index.md                      # La Prima pagina del tuo sito (essenziale)
     |
     +---blog
     |       ...                       # Inserisci qui i tuoi post per il blog
     |
     \---_11ty
         +---_data
-        |       meta.js               # Modifica questo file!
+        |       meta.js               # MODIFICA QUESTO FILE!
         |
         +---_generate
         |       404.njk
         |       feed.njk
         |       manifest.njk
-        |       offline.njk
+        |       offline.njk           # Pagina mostrata dall'app se offline
         |       pagesjson.njk
         |       robot.njk
         |       sitemap.njk
@@ -95,20 +95,20 @@ Usabile ma con qualche correzione da effettuare.
         |       head-article.njk
         |       head-website.njk
         |       head.njk
-        |       nav.njk
+        |       nav.njk             # Header sito (Titolo e Nav Bar)
         |
-        +---_layouts
-        |       article.njk
-        |       blog.njk
-        |       page.njk
+        +---_layouts                # Layouts:
+        |       article.njk         # Articoli del Blog
+        |       blog.njk            # Pagina del Blog
+        |       page.njk            # Pagine generiche
         |
-        +---_social
+        +---_social                 # File generati per l'immagine social
         |       pages.json
         |       social.css
         |       template.html
         |
         +---_static
-        |   +---app
+        |   +---app                 # Risorse statiche
         |   |       .htaccess
         |   |       sw.js
         |   |
@@ -121,5 +121,4 @@ Usabile ma con qualche correzione da effettuare.
         \---_tailwindCSS
                 raw-social.css       # CSS del tuo sito
                 raw-website.css      # Modifica se vuoi cambiare l'immagine social
-
 ```
