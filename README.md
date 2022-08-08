@@ -23,7 +23,7 @@
 - ✅ Light/Dark mode
 - ✅ [Netifly](https://www.netlify.com/)
 
-  ## Cosa ho usato:
+## Cosa ho usato:
 
 - [Eleventy](https://github.com/11ty/eleventy)
   - [Plugin eleventy-img](https://github.com/11ty/eleventy-img)
@@ -48,11 +48,12 @@ Usabile ma con qualche correzione da effettuare.
 ## Folder Tree
 
 ```bash
+Minimalism
 |   .eleventy.js
 |   .gitattributes
 |   .gitignore
 |   LICENSE
-|   logo.png                        # Sostituisci questo file con il tuo logo
+|   logo.png                          # Sostituisci questo file con il tuo logo
 |   netlify.toml
 |   package-lock.json
 |   package.json
@@ -95,30 +96,30 @@ Usabile ma con qualche correzione da effettuare.
         |       head-article.njk
         |       head-website.njk
         |       head.njk
-        |       nav.njk             # Header sito (Titolo e Nav Bar)
+        |       nav.njk               # Header sito (Titolo e Nav Bar)
         |
-        +---_layouts                # Layouts:
-        |       article.njk         # Articoli del Blog
-        |       blog.njk            # Pagina del Blog
-        |       page.njk            # Pagine generiche
+        +---_layouts                  # Layouts:
+        |       article.njk           # Articoli del Blog
+        |       blog.njk              # Pagina del Blog
+        |       page.njk              # Pagine generiche
         |
-        +---_social                 # File generati per l'immagine social
+        +---_social                   # File generati per l'immagine social
         |       pages.json
         |       social.css
         |       template.html
         |
         +---_static
-        |   +---app                 # Risorse statiche
+        |   +---app                   # Risorse statiche
         |   |       .htaccess
         |   |       sw.js
         |   |
         |   +---favicon
-        |   |       ...             # Favicon Generate a partire dal file logo.png
+        |   |       ...               # Favicon Generate a partire dal file logo.png
         |   |
         |   \---img
         |           ...
         |
         \---_tailwindCSS
-                raw-social.css       # CSS del tuo sito
-                raw-website.css      # Modifica se vuoi cambiare l'immagine social
+                raw-social.css        # CSS del tuo sito
+                raw-website.css       # Modifica se vuoi cambiare l'immagine social
 ```

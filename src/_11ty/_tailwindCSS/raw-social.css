@@ -5,13 +5,14 @@
 html {
   max-width: 2560px;
   max-height: 1440px;
+  @apply font-serif;
 }
 
 body {
-  @apply grid 
-            h-screen 
-            grid-flow-col 
-            grid-rows-4 
+  @apply grid
+            h-screen
+            grid-flow-col
+            grid-rows-4
             gap-10
             bg-blue-600
             bg-cover
@@ -31,9 +32,9 @@ header {
 
 h1 {
   @apply min-h-fit
-            p-14	 
+            p-14
             text-center
-            text-9xl 
+            text-9xl
             font-bold
             leading-tight
             tracking-wide;
@@ -45,7 +46,7 @@ footer {
             flex-row
             items-center
             gap-10
-            bg-white/30 
+            bg-white/30
             p-10
             backdrop-blur-sm;
 }
