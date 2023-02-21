@@ -1,6 +1,6 @@
 # Minimalism
 
-<a href="https://venerable-sundae-621325.netlify.app/" target="blank_">
+<a href="https://11ty-minimalism.netlify.app/" target="blank_">
   <img alt="antreprima" src="http://marcomicale.altervista.org/minimalism.webp" width="100%" >
 </a>
 
